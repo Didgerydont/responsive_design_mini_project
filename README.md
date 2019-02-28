@@ -1,27 +1,43 @@
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+# Responsive Design Using The Mobile First Approach
 
+## The Goal
+The goal is to practice building a one page website that adapts to the size of the browser window changing due to the site being viewed on different devices
 
-Hi there! Welcome to Cloud9 IDE!
+## Sample code
 
-To get you started, we included a small hello world application.
+### html
 
-1) Open the hello-world.html file
+`<section class="section">
+            <div class="vcenter">
+                <article class="article column column-60">
+                    <p class="section-paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adi
+                    </p>
+                </article>
+                <aside class="aside column column-40">
+                    <p class="section-paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse numquam neque possimus, pariatur. Recusandae, obcaecati! Aspernatur quaerat et reiciendis aperiam dolor, incidunt quas expedita nostrum nobis maiores accusamus sint non aliquid porro aut cumque perferendis fugiat unde ullam amet eaque? Quidem ipsum accusamus, quisquam quaerat tempore, hic adipisci vel cum!
+                    </p>
+                </aside>
+            </div>`
 
-2) Click on the Preview button to open a live preview pane
+### css
 
-3) Make some changes to the file, save, watch the preview, and have fun!
+` .vcenter{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}`
 
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for documentation, or http://support.c9.io for support.
-To watch some training videos, visit http://www.youtube.com/user/c9ide
-# responsive_design_mini_project
+`@media (min-width: 768px) {
+    .column {
+    float: left;
+    }
+    .column-60 {
+        width: 60%;
+}`
+    
+`   .column-40 {
+        width: 40%;
+    }
+}` 
